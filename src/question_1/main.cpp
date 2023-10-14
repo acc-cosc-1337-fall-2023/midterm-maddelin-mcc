@@ -10,6 +10,11 @@ int main()
     do{
         cout<<"\nEnter a number in base 10: ";
         cin>>num;
+        while(num < 1 || num > 512 )
+        {
+            cout<<"Please enter a number between 1 and 512: ";
+            cin>>num; 
+        }
         string result = decimal_to_hex(num);
         cout<<"\nResult: "<<result<<"\n\nEnter 'Y' to run again or 'N' to exit: ";
         cin>>selection;
