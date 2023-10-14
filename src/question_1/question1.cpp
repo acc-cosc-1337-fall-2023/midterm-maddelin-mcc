@@ -34,7 +34,7 @@ std::string decimal_to_hex(int num)
         }
         else{
             q = q/16;
-            r = num - q*16;
+            r = num%16;
             num = q;
         }
         
@@ -90,7 +90,6 @@ std::string decimal_to_hex(int num)
                 str.push_back('F');
                 break;
         }
-        num = q;
     }
 //Since we have been adding chars to the end of the string, we need to flip it, because the correct order would 
 //be for the last remainder to be at the beginning of the hex number
